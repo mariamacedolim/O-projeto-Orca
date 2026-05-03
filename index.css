@@ -4,7 +4,7 @@ body {
     margin: 0;
 }
 
-/* ===== TIPOGRAFIA ===== */
+
 h1 {
     color: rgb(85, 146, 184) !important;
     font-family: 'Times New Roman', Times, serif;
@@ -26,7 +26,7 @@ h6 {
     color: rgb(125, 179, 200) !important;
 }
 
-/* ===== NAV ===== */
+
 .navbar {
     background: linear-gradient(to bottom, rgb(0, 22, 56), rgb(15, 70, 116));
 }
@@ -50,7 +50,7 @@ h6 {
     color: rgb(5, 143, 143) !important;
 }
 
-/* ===== SEÇÕES ===== */
+
 section {
     scroll-margin-top: 60px;
     padding: 80px 20px;
@@ -90,7 +90,7 @@ section {
     background-position: center;
 }
 
-/* ===== CAIXAS ===== */
+
 .caixa1 {
     background: linear-gradient(to top, lightblue, rgb(63, 111, 165));
     border-radius: 10px;
@@ -107,7 +107,7 @@ section {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* ===== LISTA ===== */
+
 .lista {
     background: linear-gradient(to bottom, rgb(41, 68, 126), rgb(137, 211, 224));
     font-size: clamp(16px, 2.5vw, 24px);
@@ -124,7 +124,7 @@ section {
     list-style: none;
 }
 
-/* ===== LINK BOTÃO ===== */
+
 a {
     display: block;
     color: rgb(144, 179, 232) !important;
@@ -147,15 +147,15 @@ a:hover {
     color: white !important;
 }
 
-/* ===== RECOMENDAÇÕES ===== */
+
 #Recomendações {
-    background: linear-gradient(to bottom, rgb(158, 189, 205), rgb(31, 103, 151));
+    background: linear-gradient(to bottom, rgb(158, 189, 205), rgb(31, 103, 151)) !important;
 }
 
 #Recomendações h5 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: clamp(22px, 4vw, 40px);
-    color: rgb(6, 81, 104);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-size: clamp(22px, 4vw, 40px) !important;
+    color: rgb(6, 81, 104) !important;
 }
 
 table {
@@ -182,7 +182,7 @@ th {
     border: 2px solid rgb(3, 58, 75) !important;
 }
 
-/* ===== CONTATO ===== */
+
 #Contato {
     background-image: url("orcas section2.jpg");
     background-size: cover;
@@ -216,14 +216,14 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px rgba(5, 143, 143, 0.5);
 }
 
-/* ===== VÍDEO ===== */
+
 #video {
     background: linear-gradient(to bottom, rgb(1, 37, 62), rgb(123, 175, 203));
     min-height: auto;
     padding: 40px 20px;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
     font-weight: bold;
     font-size: 15px;
