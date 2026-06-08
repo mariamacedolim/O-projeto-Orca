@@ -1,0 +1,542 @@
+/* ============================================
+   VARIÁVEIS DE TEMA (Modo Claro / Escuro)
+   ============================================ */
+:root,
+[data-theme="light"] {
+    --bg-body:        rgb(158, 189, 205);
+    --nav-top:        rgb(0, 22, 56);
+    --nav-bottom:     rgb(15, 70, 116);
+    --h1-color:       rgb(85, 146, 184);
+    --h2-color:       rgb(221, 246, 245);
+    --h6-color:       rgb(125, 179, 200);
+    --caixa1-from:    lightblue;
+    --caixa1-to:      rgb(63, 111, 165);
+    --caixa2-from:    lightblue;
+    --caixa2-to:      rgb(63, 111, 165);
+    --lista-from:     rgb(41, 68, 126);
+    --lista-to:       rgb(137, 211, 224);
+    --lista-color:    rgb(209, 234, 255);
+    --titulo-color:   rgb(178, 211, 255);
+    --link-color:     rgb(144, 179, 232);
+    --link-border:    rgb(144, 179, 232);
+    --link-hover-bg:  rgb(5, 39, 85);
+    --rec-from:       rgb(158, 189, 205);
+    --rec-to:         rgb(31, 103, 151);
+    --rec-h5:         rgb(6, 81, 104);
+    --table-border:   rgb(3, 58, 75);
+    --td-bg:          rgba(158, 189, 205, 0.5);
+    --td-color:       rgb(3, 58, 75);
+    --th-bg:          rgba(31, 103, 151, 0.4);
+    --th-color:       rgb(3, 58, 75);
+    --label-color:    rgb(255, 255, 255);
+    --input-border:   #b0c4db;
+    --input-bg:       rgba(255, 255, 255, 0.85);
+    --input-color:    #1a1f22;
+    --video-from:     rgb(1, 37, 62);
+    --video-to:       rgb(123, 175, 203);
+    --footer-from:    rgb(4, 20, 52);
+    --footer-to:      rgb(85, 124, 175);
+    --footer-color:   rgb(165, 203, 225);
+    --home-h4:        rgb(4, 43, 68);
+    --home-h5:        rgb(26, 31, 34);
+    --success-bg:     rgba(5, 143, 143, 0.15);
+    --success-border: rgb(5, 143, 143);
+    --success-color:  rgb(2, 95, 95);
+    --toggle-bg:      rgba(255,255,255,0.15);
+    --toggle-border:  rgba(255,255,255,0.4);
+    --toggle-hover:   rgba(255,255,255,0.25);
+    --error-color:    #ff6b6b;
+}
+
+[data-theme="dark"] {
+    --bg-body:        rgb(8, 20, 35);
+    --nav-top:        rgb(0, 8, 20);
+    --nav-bottom:     rgb(5, 25, 50);
+    --h1-color:       rgb(100, 185, 230);
+    --h2-color:       rgb(140, 210, 220);
+    --h6-color:       rgb(90, 160, 195);
+    --caixa1-from:    rgb(10, 40, 70);
+    --caixa1-to:      rgb(5, 60, 110);
+    --caixa2-from:    rgb(10, 40, 70);
+    --caixa2-to:      rgb(5, 60, 110);
+    --lista-from:     rgb(5, 20, 50);
+    --lista-to:       rgb(20, 70, 100);
+    --lista-color:    rgb(160, 210, 240);
+    --titulo-color:   rgb(100, 165, 215);
+    --link-color:     rgb(90, 160, 220);
+    --link-border:    rgb(90, 160, 220);
+    --link-hover-bg:  rgb(3, 20, 55);
+    --rec-from:       rgb(8, 20, 35);
+    --rec-to:         rgb(10, 50, 80);
+    --rec-h5:         rgb(90, 185, 210);
+    --table-border:   rgb(30, 90, 120);
+    --td-bg:          rgba(10, 30, 55, 0.7);
+    --td-color:       rgb(140, 200, 230);
+    --th-bg:          rgba(10, 60, 100, 0.6);
+    --th-color:       rgb(100, 185, 225);
+    --label-color:    rgb(160, 210, 240);
+    --input-border:   rgb(30, 80, 120);
+    --input-bg:       rgba(5, 20, 45, 0.85);
+    --input-color:    rgb(200, 230, 245);
+    --video-from:     rgb(0, 10, 25);
+    --video-to:       rgb(10, 50, 80);
+    --footer-from:    rgb(0, 5, 18);
+    --footer-to:      rgb(5, 40, 75);
+    --footer-color:   rgb(100, 165, 210);
+    --home-h4:        rgb(130, 200, 240);
+    --home-h5:        rgb(180, 220, 240);
+    --success-bg:     rgba(5, 100, 100, 0.25);
+    --success-border: rgb(5, 143, 143);
+    --success-color:  rgb(80, 200, 200);
+    --toggle-bg:      rgba(255,255,255,0.1);
+    --toggle-border:  rgba(255,255,255,0.25);
+    --toggle-hover:   rgba(255,255,255,0.2);
+    --error-color:    #ff9a9a;
+}
+
+
+/* ============================================
+   BASE
+   ============================================ */
+body {
+    background-color: var(--bg-body);
+    padding-top: 60px;
+    margin: 0;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+h1 {
+    color: var(--h1-color) !important;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: clamp(36px, 8vw, 70px) !important;
+}
+
+h2 {
+    color: var(--h2-color) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: -20px;
+    font-size: clamp(18px, 4vw, 30px) !important;
+}
+
+h6 {
+    font-size: clamp(24px, 4vw, 40px) !important;
+    text-align: center;
+    color: var(--h6-color) !important;
+}
+
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+    background: linear-gradient(to bottom, var(--nav-top), var(--nav-bottom));
+    transition: background 0.4s ease;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.4);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.nav-link {
+    color: aliceblue !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(14px, 1.8vw, 20px);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: rgb(5, 143, 143) !important;
+}
+
+
+/* ============================================
+   BOTÃO MODO ESCURO/CLARO
+   ============================================ */
+.theme-toggle {
+    background: var(--toggle-bg);
+    border: 1.5px solid var(--toggle-border);
+    border-radius: 50px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.theme-toggle:hover {
+    background: var(--toggle-hover);
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.theme-toggle:active .theme-icon {
+    transform: rotate(30deg) scale(1.2);
+}
+
+
+/* ============================================
+   SEÇÕES
+   ============================================ */
+section {
+    scroll-margin-top: 60px;
+    padding: 80px 20px;
+    min-height: 100svh;
+    box-sizing: border-box;
+}
+
+#Home {
+    background-image: url("orcas.2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Home h4 {
+    color: var(--home-h4);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: clamp(32px, 9vw, 120px);
+    word-break: break-word;
+}
+
+#Home h5 {
+    color: var(--home-h5);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(20px, 4vw, 40px);
+    text-align: center;
+}
+
+#MitoseVerdades {
+    background-image: url("NKW-518.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* ============================================
+   CAIXAS DE CONTEÚDO
+   ============================================ */
+.caixa1 {
+    background: linear-gradient(to top, var(--caixa1-from), var(--caixa1-to));
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: background 0.4s ease;
+    color: var(--lista-color);
+}
+
+.caixa2 {
+    background: linear-gradient(to bottom, var(--caixa2-from), var(--caixa2-to));
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: background 0.4s ease;
+    color: var(--lista-color);
+}
+
+.lista {
+    background: linear-gradient(to bottom, var(--lista-from), var(--lista-to));
+    font-size: clamp(16px, 2.5vw, 24px);
+    color: var(--lista-color);
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: background 0.4s ease;
+}
+
+.Título {
+    color: var(--titulo-color);
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: bold;
+    list-style: none;
+}
+
+
+/* ============================================
+   LINKS (âncoras gerais)
+   ============================================ */
+a {
+    display: block;
+    color: var(--link-color) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+    margin: 20px auto;
+    border: 2px solid var(--link-border);
+    border-radius: 5px;
+    text-decoration: none !important;
+}
+
+a:hover {
+    transform: scale(1.1);
+    background-color: var(--link-hover-bg);
+    color: white !important;
+}
+
+
+/* ============================================
+   SEÇÃO RECOMENDAÇÕES
+   ============================================ */
+#Recomendações {
+    background: linear-gradient(to bottom, var(--rec-from), var(--rec-to)) !important;
+    transition: background 0.4s ease;
+}
+
+#Recomendações h5 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-size: clamp(22px, 4vw, 40px) !important;
+    color: var(--rec-h5) !important;
+}
+
+table {
+    border-collapse: collapse !important;
+    text-align: center !important;
+    border: 2px solid var(--table-border) !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    transition: border-color 0.4s ease;
+}
+
+td {
+    padding: 10px !important;
+    border: 2px solid var(--table-border) !important;
+    font-size: clamp(13px, 1.8vw, 22px) !important;
+    color: var(--td-color) !important;
+    background-color: var(--td-bg) !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+th {
+    color: var(--th-color) !important;
+    font-size: clamp(13px, 1.8vw, 22px) !important;
+    padding: 10px !important;
+    background-color: var(--th-bg) !important;
+    border: 2px solid var(--table-border) !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+/* ============================================
+   SEÇÃO CONTATO
+   ============================================ */
+#Contato {
+    background-image: url("orcas section2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Contato h6 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(224, 233, 241) !important;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label {
+    color: var(--label-color);
+    font-size: 14px;
+    transition: color 0.4s ease;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.4s, color 0.4s;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--input-bg);
+    color: var(--input-color);
+}
+
+input:focus, textarea:focus {
+    border-color: rgb(5, 143, 143);
+    box-shadow: 0 0 5px rgba(5, 143, 143, 0.5);
+}
+
+/* Estado de erro no campo */
+input.campo-invalido,
+textarea.campo-invalido {
+    border-color: var(--error-color) !important;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.4) !important;
+    animation: shakeField 0.35s ease;
+}
+
+.field-error {
+    color: var(--error-color);
+    font-size: 13px;
+    min-height: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Botão Enviar */
+#btnEnviar {
+    display: block;
+    color: var(--link-color) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+    margin: 10px auto 0;
+    border: 2px solid var(--link-border);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+#btnEnviar:hover {
+    transform: scale(1.1);
+    background-color: var(--link-hover-bg);
+    color: white !important;
+}
+
+/* Mensagem de sucesso */
+.success-msg {
+    background-color: var(--success-bg);
+    border: 2px solid var(--success-border);
+    border-radius: 8px;
+    padding: 14px 20px;
+    color: var(--success-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.success-animate {
+    animation: fadeInSuccess 0.5s ease;
+}
+
+@keyframes fadeInSuccess {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shakeField {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-6px); }
+    50%  { transform: translateX(6px); }
+    75%  { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+
+/* ============================================
+   SEÇÃO VÍDEO
+   ============================================ */
+#video {
+    background: linear-gradient(to bottom, var(--video-from), var(--video-to));
+    min-height: auto;
+    padding: 40px 20px;
+    transition: background 0.4s ease;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    font-weight: bold;
+    font-size: 15px;
+    background: linear-gradient(to right, var(--footer-from), var(--footer-to));
+    color: var(--footer-color);
+    min-height: 0 !important;
+    transition: background 0.4s ease;
+}
+
+footer p {
+    color: var(--footer-color);
+    margin: 0;
+    transition: color 0.4s ease;
+}
+
+footer a {
+    color: var(--footer-color) !important;
+    border: none !important;
+    background: none !important;
+    display: inline;
+    width: auto;
+    margin: 0 8px;
+    padding: 0;
+}
+
+footer a:hover {
+    color: white !important;
+    transform: none;
+    background-color: transparent !important;
+}
+
+
+/* ============================================
+   ANIMAÇÕES AO SCROLL
+   ============================================ */
+
+/* Estado inicial — invisível antes de revelar */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.reveal-left {
+    transform: translateX(-40px);
+}
+
+.reveal.reveal-up {
+    transform: translateY(40px);
+}
+
+/* Estado final — visível após o Observer disparar */
+.reveal.revealed {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Delays escalonados para elementos filhos */
+.reveal-delay-1 {
+    transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.45s;
+}
