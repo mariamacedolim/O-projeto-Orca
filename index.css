@@ -1,6 +1,4 @@
-/* ============================================
-   VARIÁVEIS DE TEMA (Modo Claro / Escuro)
-   ============================================ */
+
 :root,
 [data-theme="light"] {
     --bg-body:        rgb(158, 189, 205);
@@ -95,9 +93,6 @@
 }
 
 
-/* ============================================
-   BASE
-   ============================================ */
 body {
     background-color: var(--bg-body);
     padding-top: 60px;
@@ -105,10 +100,6 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
-/* ============================================
-   TIPOGRAFIA
-   ============================================ */
 h1 {
     color: var(--h1-color) !important;
     font-family: 'Times New Roman', Times, serif;
@@ -131,9 +122,7 @@ h6 {
 }
 
 
-/* ============================================
-   NAVBAR
-   ============================================ */
+
 .navbar {
     background: linear-gradient(to bottom, var(--nav-top), var(--nav-bottom));
     transition: background 0.4s ease;
@@ -159,41 +148,25 @@ h6 {
 }
 
 
-/* ============================================
-   BOTÃO MODO ESCURO/CLARO
-   ============================================ */
 .theme-toggle {
     background: var(--toggle-bg);
     border: 1.5px solid var(--toggle-border);
     border-radius: 50px;
-    padding: 4px 12px;
+    padding: 5px 14px;
     cursor: pointer;
-    font-size: 18px;
-    line-height: 1;
+    font-size: clamp(12px, 1.5vw, 15px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    letter-spacing: 0.5px;
     transition: background 0.3s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }
 
 .theme-toggle:hover {
     background: var(--toggle-hover);
-    transform: scale(1.1);
-}
-
-.theme-icon {
-    display: inline-block;
-    transition: transform 0.4s ease;
-}
-
-.theme-toggle:active .theme-icon {
-    transform: rotate(30deg) scale(1.2);
+    transform: scale(1.05);
 }
 
 
-/* ============================================
-   SEÇÕES
-   ============================================ */
 section {
     scroll-margin-top: 60px;
     padding: 80px 20px;
@@ -234,9 +207,6 @@ section {
 }
 
 
-/* ============================================
-   CAIXAS DE CONTEÚDO
-   ============================================ */
 .caixa1 {
     background: linear-gradient(to top, var(--caixa1-from), var(--caixa1-to));
     border-radius: 10px;
@@ -275,9 +245,7 @@ section {
 }
 
 
-/* ============================================
-   LINKS (âncoras gerais)
-   ============================================ */
+
 a {
     display: block;
     color: var(--link-color) !important;
@@ -301,9 +269,7 @@ a:hover {
 }
 
 
-/* ============================================
-   SEÇÃO RECOMENDAÇÕES
-   ============================================ */
+
 #Recomendações {
     background: linear-gradient(to bottom, var(--rec-from), var(--rec-to)) !important;
     transition: background 0.4s ease;
@@ -339,13 +305,10 @@ th {
     padding: 10px !important;
     background-color: var(--th-bg) !important;
     border: 2px solid var(--table-border) !important;
+    vertical-align: middle !important;   /* ← linha nova */
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
-/* ============================================
-   SEÇÃO CONTATO
-   ============================================ */
 #Contato {
     background-image: url("orcas section2.jpg");
     background-size: cover;
@@ -388,7 +351,7 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px rgba(5, 143, 143, 0.5);
 }
 
-/* Estado de erro no campo */
+
 input.campo-invalido,
 textarea.campo-invalido {
     border-color: var(--error-color) !important;
@@ -426,7 +389,6 @@ textarea.campo-invalido {
     color: white !important;
 }
 
-/* Mensagem de sucesso */
 .success-msg {
     background-color: var(--success-bg);
     border: 2px solid var(--success-border);
@@ -457,9 +419,7 @@ textarea.campo-invalido {
 }
 
 
-/* ============================================
-   SEÇÃO VÍDEO
-   ============================================ */
+
 #video {
     background: linear-gradient(to bottom, var(--video-from), var(--video-to));
     min-height: auto;
@@ -468,9 +428,6 @@ textarea.campo-invalido {
 }
 
 
-/* ============================================
-   FOOTER
-   ============================================ */
 footer {
     font-weight: bold;
     font-size: 15px;
@@ -503,11 +460,7 @@ footer a:hover {
 }
 
 
-/* ============================================
-   ANIMAÇÕES AO SCROLL
-   ============================================ */
 
-/* Estado inicial — invisível antes de revelar */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -522,13 +475,13 @@ footer a:hover {
     transform: translateY(40px);
 }
 
-/* Estado final — visível após o Observer disparar */
+
 .reveal.revealed {
     opacity: 1;
     transform: translate(0, 0);
 }
 
-/* Delays escalonados para elementos filhos */
+
 .reveal-delay-1 {
     transition-delay: 0.15s;
 }
